@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/notifi_basic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_purple"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="基本通知"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/notifi_reply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/holo_purple"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="回复操作"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/notifi_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/holo_purple"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="显示进度条"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

@@ -1,0 +1,105 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+repositories {
+    mavenCentral()
+}
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion '29.0.2'
+    defaultConfig {
+        applicationId "com.workbook.liuwb.workbook"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        flavorDimensions "versionCode"
+    }
+    productFlavors {
+        free {
+            dimension "versionCode"
+            applicationIdSuffix ".free"
+        }
+        pro {
+            dimension "versionCode"
+            applicationIdSuffix ".pro"
+        }
+    }
+    dataBinding {
+        enabled true
+    }
+    signingConfigs {
+        workbook_debug {
+            storeFile file(DEBUG_STORE_FILE)
+            keyAlias DEBUG_KEY_ALIAS
+            storePassword DEBUG_STORE_PASSWORD
+            keyPassword DEBUG_KEY_PASSWORD
+            v1SigningEnabled true
+            v2SigningEnabled false
+        }
+        workbook_realese {
+            storeFile file(RELEASE_STORE_FILE)
+            keyAlias RELEASE_KEY_ALIAS
+            storePassword RELEASE_STORE_PASSWORD
+            keyPassword RELEASE_KEY_PASSWORD
+            v1SigningEnabled true
+            v2SigningEnabled false
+        }
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            applicationIdSuffix ".debug"
+
+//            signingConfig signingConfigs.workbook_debug
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            applicationIdSuffix ".release"
+
+            signingConfig signingConfigs.workbook_realese
+        }
+    }
+    lintOptions {
+        disable 'GoogleAppIndexingWarning'
+    }
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java', 'src/main/aidl']
+            resources.srcDirs = ['src/main/java', 'src/main/aidl']
+            aidl.srcDirs = ['src/main/aidl']
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+kapt {
+    generateStubs = true
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta3'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0-rc01'
+    implementation 'com.google.android.material:material:1.2.0-alpha01'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    kapt 'com.github.bumptech.glide:compiler:4.8.0'
+    implementation project(':mylibrary')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    kapt 'com.android.databinding:compiler:3.2.0-alpha10'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.14'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'me.jessyan:autosize:1.1.2'
+    implementation project(':flutter')
+    implementation 'com.alibaba:fastjson:1.2.62'
+    implementation 'com.google.code.gson:gson:2.8.6'
+}

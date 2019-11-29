@@ -1,0 +1,34 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_layer</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="mainToolbarStyle" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!--Title颜色-->
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <!--副标题字体颜色-->
+        <item name="subtitleTextColor">@android:color/white</item>
+        <!--折叠图标和NavigationIcon的颜色-->
+        <item name="colorControlNormal">@android:color/white</item>
+    </style>
+
+    <style name="mainPopMenuStyle" parent="ThemeOverlay.AppCompat.Light">
+        <!--是否覆盖锚点-->
+        <item name="overlapAnchor">false</item>
+        <!--设置背景-->
+        <!--<item name="android:background">@android:color/white</item>-->
+        <!--设置字体颜色-->
+        <!--<item name="android:textColor">@android:color/black</item>-->
+    </style>
+</resources>

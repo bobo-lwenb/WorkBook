@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="bean"
+            type="com.workbook.liuwb.workbook.databind.Demo" />
+
+        <variable
+            name="user"
+            type="com.workbook.liuwb.workbook.databind.User" />
+
+        <variable
+            name="list"
+            type="androidx.databinding.ObservableArrayList&lt;Object&gt;" />
+
+        <variable
+            name="map"
+            type="androidx.databinding.ObservableArrayMap&lt;String, Object&gt;" />
+
+        <variable
+            name="listIndex"
+            type="int" />
+
+        <variable
+            name="key"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@{bean.name}"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@{String.valueOf(bean.age)}"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/change_object"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="object" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@{user.userName}"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@{String.valueOf(user.userAge)}"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/change_filed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="filed" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@{String.valueOf(list[listIndex])}"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@{String.valueOf(map[key])}"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/change_collections"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Collections " />
+    </LinearLayout>
+</layout>

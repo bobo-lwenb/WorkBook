@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_main_search"
+        android:icon="@drawable/main_setting"
+        android:title="搜索"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/main_share"
+        android:title="分享"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_main_add"
+        android:icon="@drawable/ic_action_name"
+        android:title="新增"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/menu_main_add_photo"
+                android:title="新增照片" />
+            <item
+                android:id="@+id/menu_main_add_file"
+                android:title="新增文件" />
+        </menu>
+    </item>
+    <group android:id="@+id/menu_main_group">
+        <item
+            android:id="@+id/menu_main_setting"
+            android:icon="@drawable/main_setting"
+            android:title="设置"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/menu_main_about"
+            android:icon="@drawable/ic_icon"
+            android:title="关于"
+            app:showAsAction="never" />
+    </group>
+</menu>

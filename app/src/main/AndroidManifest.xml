@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.workbook.liuwb.workbook">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name=".WBApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        <activity
+            android:name=".activity.SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainNewActivity"
+            android:configChanges="keyboardHidden|keyboard"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".glide.GlideActivity"
+            android:parentActivityName=".MainNewActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainNewActivity" />
+        </activity>
+        <activity android:name="com.workbook.liuwb.workbook.aboutview.carousel.CarouselActivity" />
+        <activity android:name="com.workbook.liuwb.workbook.service.bind.messenger.MessengerActivity" />
+        <activity android:name=".aidl.BookManagerActivity" />
+        <activity android:name=".designpattern.adapter.AdapterActivity" />
+        <activity android:name=".designpattern.strategy.StrategyActivity" />
+        <activity android:name=".databind.DataBindDemoActivity" />
+        <activity android:name=".rxjava.RxJavaActivity" />
+        <activity android:name=".annotation.AnnoActivity" />
+        <activity android:name=".reflect.ReflectActivity" />
+        <activity android:name=".eventbus.EventOneActivity" />
+        <activity android:name=".eventbus.EventTwoActivity" />
+        <activity android:name=".eventbus.EventThreeActivity" />
+        <activity android:name=".retrofit.RetrofitActivity" />
+        <activity android:name=".autosize.AutoSizeActivity" />
+        <activity android:name=".material.MaterialActivity" />
+        <activity android:name=".material.ScrollFlagsActivity" />
+        <activity android:name=".material.CollapsingActivity" />
+        <activity android:name=".material.nested.NestedActivity" />
+        <activity android:name=".launchmode.LaunchMainActivity" />
+        <activity
+            android:name=".launchmode.LaunchOneActivity"
+            android:taskAffinity="qaz.qaz">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".launchmode.LaunchTwoActivity" />
+        <activity android:name=".launchmode.LaunchThreeActivity" />
+        <activity android:name=".notification.NotificationDemoActivity" />
+        <activity
+            android:name=".notification.TapActionActivity"
+            android:parentActivityName=".notification.NotificationDemoActivity" />
+        <activity
+            android:name=".menu.MenuDemoActivity"
+            android:parentActivityName=".MainNewActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainNewActivity" />
+        </activity>
+        <activity android:name=".refreshandloadmore.RefreshLoadMainActivity" />
+        <activity android:name=".refreshandloadmore.refreshload.RefreshLoadActivity" />
+        <activity android:name=".flutter.TestFlutterActivity" />
+        <activity android:name=".permission.PermissionActivity" />
+        <activity android:name=".aboutview.ViewMainActivity" />
+        <activity android:name=".aboutview.velocitytracker.VelocityTrackerActivity" />
+        <activity android:name=".aboutview.gesturedetector.GestureDetectorActivity" />
+        <activity android:name=".aboutview.scroller.ScrollToByActivity" />
+        <activity android:name=".service.bind.foregroundservice.ForegroundServiceActivity" />
+        <activity android:name=".handler.HandlerThreadActivity" />
+        <activity android:name=".fragment.LifeCycleActivity" />
+        <activity android:name=".mvp.v1.view.UserActivity" />
+        <activity android:name=".webview.Android2JSActivity" />
+        <activity android:name=".webview.JS2AndroidActivity" />
+        <activity android:name=".jsonparse.JsonActivity" />
+        <activity android:name=".list.listview.ListViewActivity" />
+        <activity android:name=".list.recyclerview.RecycleActivity" />
+        <activity android:name=".scoket.demo1.TCPClientActivity" />
+
+        <receiver android:name=".notification.MyBroadcastReceiver" />
+
+        <service android:name=".service.bind.foregroundservice.MyService" />
+        <service
+            android:name="com.workbook.liuwb.workbook.service.bind.messenger.MessengerService"
+            android:process=":remote" />
+        <service
+            android:name=".aidl.BookManagerService"
+            android:process=":remote" />
+        <service android:name=".scoket.demo1.TCPServerService"
+            android:process=":remote"/>
+
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="375" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="667" />
+    </application>
+
+</manifest>
