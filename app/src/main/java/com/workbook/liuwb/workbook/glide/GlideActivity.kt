@@ -8,7 +8,9 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.transition.DrawableCrossFadeFactory
 import com.workbook.liuwb.workbook.R
+import com.workbook.liuwb.workbook.TestManager
 import kotlinx.android.synthetic.main.activity_glide.*
+
 
 class GlideActivity : AppCompatActivity() {
 
@@ -21,6 +23,9 @@ class GlideActivity : AppCompatActivity() {
         val toolbar = glide_toolbar
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        val leak = LeakThread()
+        leak.start()
 
         imageView = findViewById(R.id.glide_imageView)
 
@@ -46,6 +51,15 @@ class GlideActivity : AppCompatActivity() {
                 .thumbnail(null)
                 .into(imageView!!)
 
+    }
+
+    inner class LeakThread : Thread() {
+        override fun run() {
+            super.run()
+            val manager = TestManager.getInstance(this@GlideActivity)
+            sleep(6 * 1000)
+            manager.show()
+        }
     }
 
     companion object {
