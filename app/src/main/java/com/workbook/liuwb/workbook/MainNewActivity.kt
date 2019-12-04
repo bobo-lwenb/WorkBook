@@ -32,6 +32,8 @@ import com.workbook.liuwb.workbook.mvp.v1.view.UserActivity
 import com.workbook.liuwb.workbook.service.bind.messenger.MessengerActivity
 import com.workbook.liuwb.workbook.notification.NotificationDemoActivity
 import com.workbook.liuwb.workbook.permission.PermissionActivity
+import com.workbook.liuwb.workbook.propertyanimation.LayoutAnimationsActivity
+import com.workbook.liuwb.workbook.propertyanimation.evaluator.PointEvaluatorActivity
 import com.workbook.liuwb.workbook.reflect.ReflectActivity
 import com.workbook.liuwb.workbook.refreshandloadmore.RefreshLoadMainActivity
 import com.workbook.liuwb.workbook.retrofit.RetrofitActivity
@@ -48,7 +50,7 @@ class MainNewActivity : AppCompatActivity(), OnItemClick, OnItemLongClick {
             "receiver", "messenger_service", "aidl", "databind", "rxjava", "annotation", "reflect", "eventbus",
             "retrofit", "autosize", "Material Design", "launchMode", "notification", "menu", "Refresh and Loadmore",
             "flutter", "permission", "view体系", "handler", "lifecycle", "mvp_v1", "android2js", "js2android", "json", "listview", "recycle_view",
-            "tcp_scoket")
+            "tcp_scoket", "property1", "TypeEvaluator")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -209,6 +211,14 @@ class MainNewActivity : AppCompatActivity(), OnItemClick, OnItemLongClick {
             }
             "tcp_scoket" -> {
                 intent = Intent(this@MainNewActivity, TCPClientActivity::class.java)
+                startActivity(intent)
+            }
+            "property1" -> {
+                intent = Intent(this@MainNewActivity, LayoutAnimationsActivity::class.java)
+                startActivity(intent)
+            }
+            "TypeEvaluator" -> {
+                intent = Intent(this@MainNewActivity, PointEvaluatorActivity::class.java)
                 startActivity(intent)
             }
         }

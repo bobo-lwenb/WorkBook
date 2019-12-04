@@ -98,6 +98,8 @@
         <activity android:name=".list.listview.ListViewActivity" />
         <activity android:name=".list.recyclerview.RecycleActivity" />
         <activity android:name=".scoket.demo1.TCPClientActivity" />
+        <activity android:name=".propertyanimation.LayoutAnimationsActivity" />
+        <activity android:name=".propertyanimation.evaluator.PointEvaluatorActivity" />
 
         <receiver android:name=".notification.MyBroadcastReceiver" />
 
