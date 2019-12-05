@@ -39,7 +39,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainNewActivity" />
         </activity>
-        <activity android:name="com.workbook.liuwb.workbook.aboutview.carousel.CarouselActivity" />
+        <activity android:name="com.workbook.liuwb.workbook.aboutview.customviewgroup.carousel.CarouselActivity" />
         <activity android:name="com.workbook.liuwb.workbook.service.bind.messenger.MessengerActivity" />
         <activity android:name=".aidl.BookManagerActivity" />
         <activity android:name=".designpattern.adapter.AdapterActivity" />

@@ -14,7 +14,7 @@ import com.workbook.liuwb.workbook.adapters.RecyAdapter
 import com.workbook.liuwb.workbook.aidl.BookManagerActivity
 import com.workbook.liuwb.workbook.annotation.AnnoActivity
 import com.workbook.liuwb.workbook.autosize.AutoSizeActivity
-import com.workbook.liuwb.workbook.aboutview.carousel.CarouselActivity
+import com.workbook.liuwb.workbook.aboutview.customviewgroup.carousel.CarouselActivity
 import com.workbook.liuwb.workbook.databind.DataBindDemoActivity
 import com.workbook.liuwb.workbook.eventbus.EventOneActivity
 import com.workbook.liuwb.workbook.flutter.TestFlutterActivity

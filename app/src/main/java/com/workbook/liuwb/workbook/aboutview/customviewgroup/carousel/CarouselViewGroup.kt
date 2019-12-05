@@ -1,4 +1,4 @@
-package com.workbook.liuwb.workbook.aboutview.carousel
+package com.workbook.liuwb.workbook.aboutview.customviewgroup.carousel
 
 import android.content.Context
 import android.util.AttributeSet
