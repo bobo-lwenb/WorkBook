@@ -8,7 +8,6 @@ import android.graphics.Color
 import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.View
-import android.view.ViewPropertyAnimator
 
 class MyAnimView : View {
 
@@ -23,8 +22,6 @@ class MyAnimView : View {
     constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
 
     init {
-        val set = AnimatorSet()
-        set.playTogether()
         mCPaint.color = Color.BLUE
         mTPaint.color = Color.WHITE
         mTPaint.textSize = 30f

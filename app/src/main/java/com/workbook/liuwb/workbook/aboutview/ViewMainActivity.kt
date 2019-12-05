@@ -5,6 +5,9 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.workbook.liuwb.workbook.R
+import com.workbook.liuwb.workbook.aboutview.customview.CustomImageActivity
+import com.workbook.liuwb.workbook.aboutview.customview.CustomProgressBarActivity
+import com.workbook.liuwb.workbook.aboutview.customview.CustomTitleActivity
 import com.workbook.liuwb.workbook.aboutview.gesturedetector.GestureDetectorActivity
 import com.workbook.liuwb.workbook.aboutview.scroller.ScrollToByActivity
 import com.workbook.liuwb.workbook.aboutview.velocitytracker.VelocityTrackerActivity
@@ -19,6 +22,9 @@ class ViewMainActivity : AppCompatActivity(), View.OnClickListener {
         viewmain_velocitytracker.setOnClickListener(this)
         viewmain_gesturedetector.setOnClickListener(this)
         viewmain_scrolltoby.setOnClickListener(this)
+        viewmain_customtitle.setOnClickListener(this)
+        viewmain_customtimage.setOnClickListener(this)
+        viewmain_CustomProgressBar.setOnClickListener(this)
     }
 
     override fun onClick(view: View?) {
@@ -36,6 +42,19 @@ class ViewMainActivity : AppCompatActivity(), View.OnClickListener {
                 intent.setClass(this@ViewMainActivity, ScrollToByActivity::class.java)
                 startActivity(intent)
             }
+            R.id.viewmain_customtitle -> {
+                intent.setClass(this@ViewMainActivity, CustomTitleActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.viewmain_customtimage -> {
+                intent.setClass(this@ViewMainActivity, CustomImageActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.viewmain_CustomProgressBar -> {
+                intent.setClass(this@ViewMainActivity, CustomProgressBarActivity::class.java)
+                startActivity(intent)
+            }
+
             else -> {
 
             }

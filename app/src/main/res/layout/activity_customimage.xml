@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom1="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.workbook.liuwb.workbook.aboutview.customview.CustomImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        custom1:image="@mipmap/ic_launcher"
+        custom1:imageScaleType="center"
+        custom1:titleText="hello andorid ! "
+        custom1:titleTextColor="#ff0000"
+        custom1:titleTextSize="20sp" />
+
+</LinearLayout>

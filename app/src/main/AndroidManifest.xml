@@ -100,6 +100,9 @@
         <activity android:name=".scoket.demo1.TCPClientActivity" />
         <activity android:name=".propertyanimation.LayoutAnimationsActivity" />
         <activity android:name=".propertyanimation.evaluator.PointEvaluatorActivity" />
+        <activity android:name=".aboutview.customview.CustomTitleActivity" />
+        <activity android:name=".aboutview.customview.CustomImageActivity" />
+        <activity android:name=".aboutview.customview.CustomProgressBarActivity" />
 
         <receiver android:name=".notification.MyBroadcastReceiver" />
 
