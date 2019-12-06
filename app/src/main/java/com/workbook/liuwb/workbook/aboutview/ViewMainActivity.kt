@@ -8,6 +8,8 @@ import com.workbook.liuwb.workbook.R
 import com.workbook.liuwb.workbook.aboutview.customview.CustomImageActivity
 import com.workbook.liuwb.workbook.aboutview.customview.CustomProgressBarActivity
 import com.workbook.liuwb.workbook.aboutview.customview.CustomTitleActivity
+import com.workbook.liuwb.workbook.aboutview.customviewgroup.cornerviewgroup.CustomContainerActivity
+import com.workbook.liuwb.workbook.aboutview.customviewgroup.cornerviewgroup.FlowLayoutActivity
 import com.workbook.liuwb.workbook.aboutview.gesturedetector.GestureDetectorActivity
 import com.workbook.liuwb.workbook.aboutview.scroller.ScrollToByActivity
 import com.workbook.liuwb.workbook.aboutview.velocitytracker.VelocityTrackerActivity
@@ -25,6 +27,8 @@ class ViewMainActivity : AppCompatActivity(), View.OnClickListener {
         viewmain_customtitle.setOnClickListener(this)
         viewmain_customtimage.setOnClickListener(this)
         viewmain_CustomProgressBar.setOnClickListener(this)
+        viewmain_CustomContainer.setOnClickListener(this)
+        viewmain_FlowLayout.setOnClickListener(this)
     }
 
     override fun onClick(view: View?) {
@@ -52,6 +56,14 @@ class ViewMainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.viewmain_CustomProgressBar -> {
                 intent.setClass(this@ViewMainActivity, CustomProgressBarActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.viewmain_CustomContainer -> {
+                intent.setClass(this@ViewMainActivity, CustomContainerActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.viewmain_FlowLayout -> {
+                intent.setClass(this@ViewMainActivity, FlowLayoutActivity::class.java)
                 startActivity(intent)
             }
 

@@ -101,5 +101,19 @@ class CustomProgressBar @JvmOverloads constructor(
             }
         }
     }
+
+    /**
+     * 当包含此view的activity启动或者被add时，该方法会被调用
+     */
+    override fun onAttachedToWindow() {
+        super.onAttachedToWindow()
+    }
+
+    /**
+     * 当包含此view的activity退出或者当前view被remove时，该方法会被调用
+     */
+    override fun onDetachedFromWindow() {
+        super.onDetachedFromWindow()
+    }
 }
 

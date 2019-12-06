@@ -103,6 +103,8 @@
         <activity android:name=".aboutview.customview.CustomTitleActivity" />
         <activity android:name=".aboutview.customview.CustomImageActivity" />
         <activity android:name=".aboutview.customview.CustomProgressBarActivity" />
+        <activity android:name=".aboutview.customviewgroup.cornerviewgroup.CustomContainerActivity" />
+        <activity android:name=".aboutview.customviewgroup.cornerviewgroup.FlowLayoutActivity" />
 
         <receiver android:name=".notification.MyBroadcastReceiver" />
 

@@ -40,4 +40,16 @@
         android:layout_height="wrap_content"
         android:text="CustomProgressBar" />
 
+    <Button
+        android:id="@+id/viewmain_CustomContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CustomContainer" />
+
+    <Button
+        android:id="@+id/viewmain_FlowLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FlowLayout" />
+
 </LinearLayout>
