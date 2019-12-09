@@ -4,6 +4,9 @@ import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
+import com.workbook.liuwb.mylibrary.utils.Logger;
+import com.workbook.liuwb.mylibrary.utils.cache.lru.SimpleImageLoader;
+
 import java.io.FileDescriptor;
 
 public class ImageResizer {
