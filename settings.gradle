@@ -1,7 +1,1 @@
 include ':app', ':mylibrary'
-
-setBinding(new Binding([gradle: this]))
-evaluate(new File(
-        settingsDir.parentFile,
-        'workbook_flutter/.android/include_flutter.groovy'
-))
