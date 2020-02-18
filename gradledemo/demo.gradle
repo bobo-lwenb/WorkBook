@@ -1,0 +1,67 @@
+class DemoTask extends DefaultTask {
+    @TaskAction
+    def hello() {
+        println 'hello'
+    }
+}
+
+task hello(type: DemoTask) {
+
+}
+
+task hello1 {
+    group 'demo'
+    description 'just for demo'
+    println "${path}"
+
+    dependsOn 'hello'
+    doFirst {
+
+    }
+    doLast {
+
+    }
+    onlyIf {
+        false
+    }
+}
+
+hello1.enabled = false
+
+task demo {
+    println 'task demo.'
+
+    doFirst {
+        println 'i am demo first.'
+    }
+
+    doLast {
+        println 'l am demo.'
+    }
+}
+
+task todo(dependsOn: demo) {
+    println 'task todo.'
+
+    doLast {
+        println 'i am todo'
+    }
+
+    doFirst {
+        println 'i am todo first.'
+    }
+
+    doLast {
+        println 'i am todo last.'
+    }
+}
+
+task parent {
+    println 'task parent.'
+}
+
+task child {
+    println 'task child.'
+}
+
+child.dependsOn 'parent'

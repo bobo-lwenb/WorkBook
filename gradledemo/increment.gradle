@@ -1,0 +1,162 @@
+task combineFileContentNonIncremental {
+    def sources = fileTree("${rootDir.path}/gradledemo/srcFile")
+    def destination = file("${rootDir.path}/gradledemo/destination.txt")
+    doLast {
+        destination.withPrintWriter { writer ->
+            sources.each { source ->
+                writer.println source.text
+            }
+        }
+    }
+}
+
+task combineFileContentIncremental {
+    def sources = fileTree("${rootDir.path}/gradledemo/srcFile")
+    def destination = file("${rootDir.path}/gradledemo/destination.txt")
+    inputs.dir(sources)
+    outputs.file(destination)
+    doLast {
+        destination.withPrintWriter { writer ->
+            sources.each { source ->
+                writer.println source.text
+            }
+        }
+    }
+}
+
+// ================================
+
+class Generate extends DefaultTask {
+    private int fileCount
+    private String content
+    private File generatedFileDir
+
+    @Input
+    int getFileCount() {
+        return fileCount
+    }
+
+    void setFileCount(int fileCount) {
+        this.fileCount = fileCount
+    }
+
+    @Input
+    String getContent() {
+        return content
+    }
+
+    void setContent(String content) {
+        this.content = content
+    }
+
+    @OutputDirectory
+    File getGeneratedFileDir() {
+        return generatedFileDir
+    }
+
+    void setGeneratedFileDir(File generatedFileDir) {
+        this.generatedFileDir = generatedFileDir
+    }
+
+    @TaskAction
+    void perform() throws IOException {
+        for (int i = 1; i <= fileCount; i++) {
+            writeFile(new File(generatedFileDir, i + ".txt"), content)
+        }
+    }
+
+    private void writeFile(File destination, String content) throws IOException {
+        BufferedWriter output = null
+        try {
+            output = new BufferedWriter(new FileWriter(destination))
+            output.write(content)
+        } finally {
+            if (output != null) {
+                output.close()
+            }
+        }
+    }
+}
+
+tasks.register("generate", Generate) {
+    fileCount = 2
+    content = 'Hello World!'
+    generatedFileDir = file("$buildDir/generated-output")
+}
+
+// ================================
+
+class ConfigData {
+    private int fileCount
+    private String content
+
+    @Input
+    int getFileCount() {
+        return fileCount
+    }
+
+    void setFileCount(int fileCount) {
+        this.fileCount = fileCount
+    }
+
+    @Input
+    String getContent() {
+        return content
+    }
+
+    void setContent(String content) {
+        this.content = content
+    }
+}
+
+class Generate1 extends DefaultTask {
+    private File generatedFileDir
+    // 由于下面的 configData 方法要使用，这里需要先构造出来
+    private ConfigData configData = new ConfigData()
+
+    // 添加方法接受一个 action，这里就是开发者使用 configData 最终调用的地方
+    void configData(Action<? super ConfigData> action) {
+        action.execute(configData)
+    }
+
+    @Nested
+    ConfigData getConfigData() {
+        return configData
+    }
+
+    @OutputDirectory
+    File getGeneratedFileDir() {
+        return generatedFileDir
+    }
+
+    void setGeneratedFileDir(File generatedFileDir) {
+        this.generatedFileDir = generatedFileDir
+    }
+
+    @TaskAction
+    void perform() throws IOException {
+        for (int i = 1; i <= configData.getFileCount(); i++) {
+            writeFile(new File(generatedFileDir, i + ".txt"), configData.getContent())
+        }
+    }
+
+    private void writeFile(File destination, String content) throws IOException {
+        BufferedWriter output = null
+        try {
+            output = new BufferedWriter(new FileWriter(destination))
+            output.write(content)
+        } finally {
+            if (output != null) {
+                output.close()
+            }
+        }
+    }
+}
+
+tasks.register("generate1", Generate1) {
+    configData {
+        fileCount = 8
+        content = 'Hello World!'
+    }
+    generatedFileDir = file("$buildDir/generated-output")
+}
