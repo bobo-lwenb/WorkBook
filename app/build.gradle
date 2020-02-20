@@ -17,15 +17,21 @@ android {
         versionCode 1
         versionName "1.0"
 
-        flavorDimensions "versionCode"
     }
     productFlavors {
-        free {
+        flavorDimensions "versionCode", "versionName"
+        xiaomi {
             dimension "versionCode"
+        }
+        vivo {
+            dimension "versionCode"
+        }
+        free {
+            dimension "versionName"
             applicationIdSuffix ".free"
         }
         pro {
-            dimension "versionCode"
+            dimension "versionName"
             applicationIdSuffix ".pro"
         }
     }
@@ -54,14 +60,12 @@ android {
         debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            applicationIdSuffix ".debug"
 
 //            signingConfig signingConfigs.workbook_debug
         }
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            applicationIdSuffix ".release"
 
             signingConfig signingConfigs.workbook_realese
         }
