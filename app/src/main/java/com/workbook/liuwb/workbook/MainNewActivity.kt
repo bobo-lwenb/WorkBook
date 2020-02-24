@@ -2,19 +2,26 @@ package com.workbook.liuwb.workbook
 
 import android.content.Intent
 import android.content.res.Configuration
+import android.graphics.Point
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.DialogFragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.workbook.liuwb.mylibrary.utils.Logger
+import com.workbook.liuwb.workbook.aboutview.GeneralDialog
 import com.workbook.liuwb.workbook.aboutview.ViewMainActivity
+import com.workbook.liuwb.workbook.aboutview.customviewgroup.carousel.CarouselActivity
 import com.workbook.liuwb.workbook.adapters.RecyAdapter
 import com.workbook.liuwb.workbook.aidl.BookManagerActivity
 import com.workbook.liuwb.workbook.annotation.AnnoActivity
 import com.workbook.liuwb.workbook.autosize.AutoSizeActivity
-import com.workbook.liuwb.workbook.aboutview.customviewgroup.carousel.CarouselActivity
 import com.workbook.liuwb.workbook.databind.DataBindDemoActivity
 import com.workbook.liuwb.workbook.eventbus.EventOneActivity
 import com.workbook.liuwb.workbook.flutter.TestFlutterActivity
@@ -29,7 +36,6 @@ import com.workbook.liuwb.workbook.listener.OnItemLongClick
 import com.workbook.liuwb.workbook.material.MaterialActivity
 import com.workbook.liuwb.workbook.menu.MenuDemoActivity
 import com.workbook.liuwb.workbook.mvp.v1.view.UserActivity
-import com.workbook.liuwb.workbook.service.bind.messenger.MessengerActivity
 import com.workbook.liuwb.workbook.notification.NotificationDemoActivity
 import com.workbook.liuwb.workbook.permission.PermissionActivity
 import com.workbook.liuwb.workbook.propertyanimation.LayoutAnimationsActivity
@@ -40,9 +46,12 @@ import com.workbook.liuwb.workbook.retrofit.RetrofitActivity
 import com.workbook.liuwb.workbook.rxjava.RxJavaActivity
 import com.workbook.liuwb.workbook.scoket.demo1.TCPClientActivity
 import com.workbook.liuwb.workbook.service.bind.foregroundservice.ForegroundServiceActivity
+import com.workbook.liuwb.workbook.service.bind.messenger.MessengerActivity
 import com.workbook.liuwb.workbook.webview.Android2JSActivity
 import com.workbook.liuwb.workbook.webview.JS2AndroidActivity
 import kotlinx.android.synthetic.main.activity_main_new.*
+import kotlinx.android.synthetic.main.dialog_general.*
+import kotlinx.android.synthetic.main.fragment_common_dialog.*
 
 class MainNewActivity : AppCompatActivity(), OnItemClick, OnItemLongClick {
 
@@ -50,7 +59,7 @@ class MainNewActivity : AppCompatActivity(), OnItemClick, OnItemLongClick {
             "receiver", "messenger_service", "aidl", "databind", "rxjava", "annotation", "reflect", "eventbus",
             "retrofit", "autosize", "Material Design", "launchMode", "notification", "menu", "Refresh and Loadmore",
             "flutter", "permission", "view体系", "handler", "lifecycle", "mvp_v1", "android2js", "js2android", "json", "listview", "recycle_view",
-            "tcp_scoket", "property1", "TypeEvaluator")
+            "tcp_scoket", "property1", "TypeEvaluator", "customdialog", "generaldialog")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -221,7 +230,65 @@ class MainNewActivity : AppCompatActivity(), OnItemClick, OnItemLongClick {
                 intent = Intent(this@MainNewActivity, PointEvaluatorActivity::class.java)
                 startActivity(intent)
             }
+            "customdialog" -> {
+                showDialog("11111", "adafsfgfgdg", "cancel", "ok", {
+                    Toast.makeText(this, "left", Toast.LENGTH_SHORT).show()
+                }, {
+                    Toast.makeText(this, "right", Toast.LENGTH_SHORT).show()
+                })
+            }
+            "generaldialog" -> {
+                GeneralDialog.Builder(this)
+                        .setContentView(R.layout.dialog_general)
+                        .setText(R.id.title, "notice!!")
+                        .setText(R.id.content, "hfehvighibhgtribrgbvglfbjfgbjfgb")
+                        .setText(R.id.left, "cancel")
+                        .setCLickListener(R.id.left) { dialog, view ->
+                            dialog.dismiss()
+                        }
+                        .setText(R.id.right, "OK")
+                        .setCLickListener(R.id.right) { dialog, view ->
+                            dialog.dismiss()
+                        }
+                        .build()
+                        .show(supportFragmentManager, "su")
+            }
         }
+    }
+
+    private fun showDialog(titleText: String, content: String, leftText: String, rightTetx: String, leftClick: OnLeftClick, rightClick: OnRightClick) {
+
+        val view = LayoutInflater.from(this).inflate(R.layout.fragment_common_dialog, null, false)
+
+        val dialog = AlertDialog.Builder(this)
+                .setView(view)
+                .create()
+
+        view.findViewById<TextView>(R.id.titleT).text = titleText
+        view.findViewById<TextView>(R.id.contentT).text = content
+        view.findViewById<TextView>(R.id.left).text = leftText
+        view.findViewById<TextView>(R.id.right).text = rightTetx
+
+        view.findViewById<TextView>(R.id.left).setOnClickListener {
+            dialog.dismiss()
+            leftClick()
+        }
+
+        view.findViewById<TextView>(R.id.right).setOnClickListener {
+            dialog.dismiss()
+            rightClick()
+        }
+        dialog.setCanceledOnTouchOutside(false)
+
+        dialog.show()
+        val point = Point()
+        windowManager.defaultDisplay.getSize(point)
+
+        val attr = dialog.window?.attributes
+
+        attr?.width = (point.x * 0.6).toInt()
+
+        dialog.window?.attributes = attr
     }
 
     override fun onitemLongClick(view: View?, position: Int) {
@@ -238,3 +305,5 @@ class MainNewActivity : AppCompatActivity(), OnItemClick, OnItemLongClick {
     }
 
 }
+typealias OnLeftClick = () -> Unit
+typealias OnRightClick = () -> Unit

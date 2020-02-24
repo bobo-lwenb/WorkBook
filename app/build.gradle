@@ -18,23 +18,23 @@ android {
         versionName "1.0"
 
     }
-    productFlavors {
-        flavorDimensions "versionCode", "versionName"
-        xiaomi {
-            dimension "versionCode"
-        }
-        vivo {
-            dimension "versionCode"
-        }
-        free {
-            dimension "versionName"
-            applicationIdSuffix ".free"
-        }
-        pro {
-            dimension "versionName"
-            applicationIdSuffix ".pro"
-        }
-    }
+//    productFlavors {
+//        flavorDimensions "versionCode", "versionName"
+//        xiaomi {
+//            dimension "versionCode"
+//        }
+//        vivo {
+//            dimension "versionCode"
+//        }
+//        free {
+//            dimension "versionName"
+//            applicationIdSuffix ".free"
+//        }
+//        pro {
+//            dimension "versionName"
+//            applicationIdSuffix ".pro"
+//        }
+//    }
     dataBinding {
         enabled true
     }
