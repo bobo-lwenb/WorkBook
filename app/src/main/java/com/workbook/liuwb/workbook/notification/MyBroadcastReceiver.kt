@@ -24,7 +24,7 @@ class MyBroadcastReceiver : BroadcastReceiver() {
             val text = RemoteInput.getResultsFromIntent(intent).getCharSequence(key)
             Logger.e("qqqqqq $text $id $key")
 
-            val notificationCompat = NotificationCompat.Builder(context, channel)
+            val notificationCompat = NotificationCompat.Builder(context, channel!!)
                     .setSmallIcon(R.drawable.ic_icon)
                     .setContentText("1234567890")
                     .build()

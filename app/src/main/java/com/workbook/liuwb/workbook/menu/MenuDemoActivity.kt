@@ -97,7 +97,7 @@ class MenuDemoActivity : AppCompatActivity(), View.OnClickListener, View.OnLongC
     /**
      * toolbar选项菜单点击
      */
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean = when (item?.itemId) {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item?.itemId) {
         R.id.menu_main_add -> {
             true
         }
@@ -123,7 +123,7 @@ class MenuDemoActivity : AppCompatActivity(), View.OnClickListener, View.OnLongC
     /**
      * 上下文浮动菜单点击事件
      */
-    override fun onContextItemSelected(item: MenuItem?): Boolean = when (item?.itemId) {
+    override fun onContextItemSelected(item: MenuItem): Boolean = when (item?.itemId) {
         R.id.context_about -> {
             true
         }

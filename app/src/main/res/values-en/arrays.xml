@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="main_item">
+        <item>glide</item>
+        <item>carousel</item>
+        <item>start_service</item>
+        <item>bind_service</item>
+        <item>ForegroundService</item>
+        <item>receiver</item>
+        <item>messenger_service</item>
+        <item>aidl</item>
+        <item>databind</item>
+        <item>rxjava</item>
+        <item>annotation</item>
+        <item>reflect</item>
+        <item>eventbus</item>
+        <item>retrofit</item>
+        <item>autosize</item>
+        <item>Material Design</item>
+        <item>launchMode</item>
+        <item>notification</item>
+        <item>menu</item>
+        <item>Refresh and Loadmore</item>
+        <item>flutter</item>
+        <item>permission</item>
+        <item>view system</item>
+        <item>handler</item>
+        <item>lifecycle</item>
+        <item>mvp_v1</item>
+        <item>android2js</item>
+        <item>js2android</item>
+        <item>json</item>
+        <item>listview</item>
+        <item>recycle_view</item>
+        <item>tcp_scoket</item>
+        <item>property1</item>
+        <item>TypeEvaluator</item>
+        <item>customdialog</item>
+        <item>generaldialog</item>
+    </string-array>
+</resources>

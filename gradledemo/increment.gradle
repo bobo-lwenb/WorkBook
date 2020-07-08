@@ -1,6 +1,6 @@
 task combineFileContentNonIncremental {
     def sources = fileTree("${rootDir.path}/gradledemo/srcFile")
-    def destination = file("${rootDir.path}/gradledemo/destination.txt")
+    def destination = file("${rootDir.path}/gradledemo/srcFile/destination.txt")
     doLast {
         destination.withPrintWriter { writer ->
             sources.each { source ->
@@ -12,7 +12,7 @@ task combineFileContentNonIncremental {
 
 task combineFileContentIncremental {
     def sources = fileTree("${rootDir.path}/gradledemo/srcFile")
-    def destination = file("${rootDir.path}/gradledemo/destination.txt")
+    def destination = file("${rootDir.path}/gradledemo/srcFile/destination.txt")
     inputs.dir(sources)
     outputs.file(destination)
     doLast {
@@ -155,7 +155,7 @@ class Generate1 extends DefaultTask {
 
 tasks.register("generate1", Generate1) {
     configData {
-        fileCount = 8
+        fileCount = 9
         content = 'Hello World!'
     }
     generatedFileDir = file("$buildDir/generated-output")

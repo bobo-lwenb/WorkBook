@@ -1,13 +1,5 @@
 package com.workbook.liuwb.workbook.scoket.demo1;
 
-import java.io.*;
-import java.net.Socket;
-import java.sql.Date;
-import java.text.SimpleDateFormat;
-
-import com.workbook.liuwb.mylibrary.utils.MyUtils;
-import com.workbook.liuwb.workbook.R;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
@@ -21,6 +13,18 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.workbook.liuwb.workbook.R;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.net.Socket;
+import java.sql.Date;
+import java.text.SimpleDateFormat;
 
 public class TCPClientActivity extends Activity implements OnClickListener {
 

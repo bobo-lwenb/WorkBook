@@ -43,6 +43,10 @@ task demo {
 task todo(dependsOn: demo) {
     println 'task todo.'
 
+    doFirst {
+        println 'i am todo first first'
+    }
+
     doLast {
         println 'i am todo'
     }

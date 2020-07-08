@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.workbook.liuwb.workbook.aboutview.customviewgroup.cornerviewgroup.FlowLayout
+    <com.workbook.liuwb.workbook.aboutview.customviewgroup.cornerviewgroup.FlexedLayout
         android:layout_width="300dp"
         android:layout_height="wrap_content">
 
@@ -35,6 +35,6 @@
         <TextView
             style="@style/text_bg_style"
             android:text="I thick i can" />
-    </com.workbook.liuwb.workbook.aboutview.customviewgroup.cornerviewgroup.FlowLayout>
+    </com.workbook.liuwb.workbook.aboutview.customviewgroup.cornerviewgroup.FlexedLayout>
 
 </LinearLayout>

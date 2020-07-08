@@ -8,7 +8,6 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.transition.DrawableCrossFadeFactory
 import com.workbook.liuwb.workbook.R
-import com.workbook.liuwb.workbook.TestManager
 import kotlinx.android.synthetic.main.activity_glide.*
 
 

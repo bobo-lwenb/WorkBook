@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="main_item">
+        <item>glide</item>
+        <item>轮播图</item>
+        <item>启动服务</item>
+        <item>绑定服务</item>
+        <item>前台服务</item>
+        <item>广播接收者</item>
+        <item>消息服务</item>
+        <item>aidl</item>
+        <item>数据绑定</item>
+        <item>rxjava</item>
+        <item>注解</item>
+        <item>反射</item>
+        <item>eventbus</item>
+        <item>retrofit</item>
+        <item>autosize</item>
+        <item>Material Design</item>
+        <item>activity加载模式</item>
+        <item>通知</item>
+        <item>菜单</item>
+        <item>Refresh and Loadmore</item>
+        <item>flutter</item>
+        <item>权限</item>
+        <item>view体系</item>
+        <item>handler</item>
+        <item>生命周期</item>
+        <item>mvp_v1</item>
+        <item>android2js</item>
+        <item>js2android</item>
+        <item>json</item>
+        <item>listview</item>
+        <item>recycle_view</item>
+        <item>tcp_scoket</item>
+        <item>property1</item>
+        <item>TypeEvaluator</item>
+        <item>自定义对话框1</item>
+        <item>自定义对话框2</item>
+    </string-array>
+</resources>

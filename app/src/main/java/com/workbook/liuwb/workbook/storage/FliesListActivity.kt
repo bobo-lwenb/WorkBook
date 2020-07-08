@@ -15,7 +15,6 @@ import com.workbook.liuwb.workbook.R
 import kotlinx.android.synthetic.main.activity_files_list.*
 import kotlinx.android.synthetic.main.item_list.view.*
 import java.io.File
-import java.lang.IllegalArgumentException
 
 class FliesListActivity : AppCompatActivity() {
 

@@ -9,18 +9,19 @@ import com.workbook.liuwb.workbook.R
 
 class ForegroundServiceActivity : AppCompatActivity() {
 
-    private val intent1: Intent = Intent(this, MyService::class.java)
+    private lateinit var intent1: Intent
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_foregroundservice)
+        intent1 = Intent(this, MyService::class.java)
     }
 
     fun onStartService(v: View) {
 //        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 //            startForegroundService(intent1)
 //        } else {
-            startService(intent1)
+        startService(intent1)
 //        }
     }
 
