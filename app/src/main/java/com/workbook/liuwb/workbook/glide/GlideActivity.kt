@@ -23,9 +23,6 @@ class GlideActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        val leak = LeakThread()
-        leak.start()
-
         imageView = findViewById(R.id.glide_imageView)
 
         val options = RequestOptions()
@@ -50,15 +47,6 @@ class GlideActivity : AppCompatActivity() {
                 .thumbnail(null)
                 .into(imageView!!)
 
-    }
-
-    inner class LeakThread : Thread() {
-        override fun run() {
-            super.run()
-            val manager = TestManager.getInstance(this@GlideActivity)
-            sleep(6 * 1000)
-            manager.show()
-        }
     }
 
     companion object {

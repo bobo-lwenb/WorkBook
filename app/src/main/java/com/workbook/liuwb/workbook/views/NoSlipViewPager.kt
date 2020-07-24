@@ -5,6 +5,9 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 import androidx.viewpager.widget.ViewPager
 
+/**
+ * 不可以左右滑动的ViewPager
+ */
 class NoSlipViewPager : ViewPager {
 
     var isNoSlip = true

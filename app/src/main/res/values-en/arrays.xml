@@ -2,6 +2,7 @@
 <resources>
     <string-array name="main_item">
         <item>glide</item>
+        <item>memory manage</item>
         <item>carousel</item>
         <item>start_service</item>
         <item>bind_service</item>

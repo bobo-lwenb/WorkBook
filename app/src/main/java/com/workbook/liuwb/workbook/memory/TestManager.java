@@ -1,4 +1,4 @@
-package com.workbook.liuwb.workbook.glide;
+package com.workbook.liuwb.workbook.memory;
 
 import android.content.Context;
 

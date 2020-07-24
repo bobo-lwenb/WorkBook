@@ -23,6 +23,7 @@ import com.workbook.liuwb.workbook.aboutview.customviewgroup.carousel.CarouselAc
 import com.workbook.liuwb.workbook.adapters.RecyAdapter
 import com.workbook.liuwb.workbook.aidl.BookManagerActivity
 import com.workbook.liuwb.workbook.annotation.AnnoActivity
+import com.workbook.liuwb.workbook.anrdemo.ANRActivity
 import com.workbook.liuwb.workbook.autosize.AutoSizeActivity
 import com.workbook.liuwb.workbook.databind.DataBindDemoActivity
 import com.workbook.liuwb.workbook.eventbus.EventOneActivity
@@ -36,6 +37,7 @@ import com.workbook.liuwb.workbook.list.recyclerview.RecycleActivity
 import com.workbook.liuwb.workbook.listener.OnItemClick
 import com.workbook.liuwb.workbook.listener.OnItemLongClick
 import com.workbook.liuwb.workbook.material.MaterialActivity
+import com.workbook.liuwb.workbook.memory.Memory1Activity
 import com.workbook.liuwb.workbook.menu.MenuDemoActivity
 import com.workbook.liuwb.workbook.mvp.v1.view.UserActivity
 import com.workbook.liuwb.workbook.notification.NotificationDemoActivity
@@ -104,7 +106,12 @@ class MainNewActivity : AppCompatActivity(), OnItemClick, OnItemLongClick {
         val intent: Intent
         when (data[position]) {
             "glide", "glide" -> {
-                intent = Intent(this@MainNewActivity, GlideActivity::class.java)
+//                intent = Intent(this@MainNewActivity, GlideActivity::class.java)
+                intent = Intent(this@MainNewActivity, ANRActivity::class.java)
+                startActivity(intent)
+            }
+            "内存管理", "memory manage" -> {
+                intent = Intent(this@MainNewActivity, Memory1Activity::class.java)
                 startActivity(intent)
             }
             "carousel", "轮播图" -> {

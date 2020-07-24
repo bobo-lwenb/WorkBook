@@ -118,8 +118,15 @@
                 <data android:mimeType="image/*" />
             </intent-filter>
         </activity>
+        <activity android:name=".memory.Memory1Activity" />
+        <activity android:name=".anrdemo.ANRActivity" />
 
         <receiver android:name=".notification.MyBroadcastReceiver" />
+<!--        <receiver android:name=".anrdemo.MyReceiver">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="com.brotherd.broadcastdemo.BROADCAST_FIRST" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
 
         <service android:name=".service.bind.foregroundservice.MyService" />
         <service

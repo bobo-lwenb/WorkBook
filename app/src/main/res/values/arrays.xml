@@ -2,6 +2,7 @@
 <resources>
     <string-array name="main_item">
         <item>glide</item>
+        <item>内存管理</item>
         <item>轮播图</item>
         <item>启动服务</item>
         <item>绑定服务</item>
