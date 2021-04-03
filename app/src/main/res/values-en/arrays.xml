@@ -38,5 +38,7 @@
         <item>TypeEvaluator</item>
         <item>customdialog</item>
         <item>generaldialog</item>
+        <item>Dagger2</item>
+        <item>ContentProvider</item>
     </string-array>
 </resources>

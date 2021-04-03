@@ -27,17 +27,17 @@ class BindingActivity : AppCompatActivity() {
         }
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_binding)
-    }
-
     override fun onStart() {
         super.onStart()
         // Bind to LocalService
         Intent(this, LocalService::class.java).also { intent ->
             bindService(intent, connection, Context.BIND_AUTO_CREATE)
         }
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_binding)
     }
 
     override fun onStop() {

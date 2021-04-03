@@ -8,6 +8,19 @@ fun SharedPreferences.modify(block: SharedPreferences.Editor.() -> Unit) {
     editor.apply()
 }
 
+fun SharedPreferences.edit(
+        commit: Boolean = false,
+        action: SharedPreferences.Editor.() -> Unit
+) {
+    val editor = edit()
+    action(editor)
+    if (commit) {
+        editor.commit()
+    } else {
+        editor.apply()
+    }
+}
+
 /// 实现和List.maxBy相同的功能
 fun <T, R : Comparable<R>> List<T>.findMaxBy(block: (T) -> R): T? {
     if (isEmpty()) return null

@@ -1,19 +1,16 @@
 package com.workbook.liuwb.workbook.glide
 
 import android.os.Bundle
-import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CircleCrop
 import com.bumptech.glide.request.RequestOptions
-import com.bumptech.glide.request.transition.DrawableCrossFadeFactory
+import com.bumptech.glide.request.target.Target
 import com.workbook.liuwb.workbook.R
 import kotlinx.android.synthetic.main.activity_glide.*
 
 
 class GlideActivity : AppCompatActivity() {
-
-    private var imageView: ImageView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,35 +20,27 @@ class GlideActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        imageView = findViewById(R.id.glide_imageView)
+        // 请求配置
+        val requestOptions = RequestOptions.bitmapTransform(CircleCrop())
+                .override(Target.SIZE_ORIGINAL) // 指定图片大小，SIZE_ORIGINAL表示原始尺寸
+                .placeholder(R.drawable.ic_launcher_background) // 加载完成前的占位符
+                .error(R.drawable.bg) // 加载失败的占位图
+                .skipMemoryCache(true)
 
-        val options = RequestOptions()
-                .override(192, 108)
-                .placeholder(R.mipmap.ic_launcher)// 占位符图片
-                .error(R.mipmap.ic_launcher_round)// 加载失败图片
-                .diskCacheStrategy(DiskCacheStrategy.NONE)// 关闭硬盘缓存
-                .skipMemoryCache(true)// 关闭内存缓存
-//                .transform(MultiTransformation())
+        // 缩略图
+        val thumbnailRequest = Glide.with(this).load(R.drawable.arrow)
 
-        val factory = DrawableCrossFadeFactory.Builder(500).setCrossFadeEnabled(true).build()
-        val options1 = DrawableTransitionOptions.with(factory)
+        Glide.with(this)
+                .load(URL_GIF) // 加载地址
+                .thumbnail(thumbnailRequest)
+                .apply(requestOptions)
+                .into(glide_imageView)
 
-        val options2 = DrawableTransitionOptions().crossFade()
-        val options3 = DrawableTransitionOptions.withCrossFade()
-
-        GlideApp.with(this)
-//                 .asBitmap()
-                .load(URL_JPG)
-                .transition(options1)
-                .apply(options)
-                .thumbnail(null)
-                .into(imageView!!)
 
     }
 
     companion object {
-
-        private val URL_JPG = "http://cn.bing.com/az/hprichbg/rb/Dongdaemun_ZH-CN10736487148_1920x1080.jpg"
-        private val URL_GIF = "http://p1.pstatp.com/large/166200019850062839d3"
+        private const val URL_JPG = "http://cn.bing.com/az/hprichbg/rb/Dongdaemun_ZH-CN10736487148_1920x1080.jpg"
+        private const val URL_GIF = "http://p1.pstatp.com/large/166200019850062839d3"
     }
 }

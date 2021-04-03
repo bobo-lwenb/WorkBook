@@ -25,6 +25,7 @@ import com.workbook.liuwb.workbook.aidl.BookManagerActivity
 import com.workbook.liuwb.workbook.annotation.AnnoActivity
 import com.workbook.liuwb.workbook.anrdemo.ANRActivity
 import com.workbook.liuwb.workbook.autosize.AutoSizeActivity
+import com.workbook.liuwb.workbook.dagger.DaggerActivity1
 import com.workbook.liuwb.workbook.databind.DataBindDemoActivity
 import com.workbook.liuwb.workbook.eventbus.EventOneActivity
 import com.workbook.liuwb.workbook.flutter.TestFlutterActivity
@@ -44,6 +45,7 @@ import com.workbook.liuwb.workbook.notification.NotificationDemoActivity
 import com.workbook.liuwb.workbook.permission.PermissionActivity
 import com.workbook.liuwb.workbook.propertyanimation.LayoutAnimationsActivity
 import com.workbook.liuwb.workbook.propertyanimation.evaluator.PointEvaluatorActivity
+import com.workbook.liuwb.workbook.provider.base.ClientActivity
 import com.workbook.liuwb.workbook.reflect.ReflectActivity
 import com.workbook.liuwb.workbook.refreshandloadmore.RefreshLoadMainActivity
 import com.workbook.liuwb.workbook.retrofit.RetrofitActivity
@@ -63,6 +65,7 @@ class MainNewActivity : AppCompatActivity(), OnItemClick, OnItemLongClick {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_new)
 
+        
         Log.e("11111111111", (100 <= 1700).toString())
 
         DensityUtil.setCustomDensity(application, this)
@@ -74,6 +77,7 @@ class MainNewActivity : AppCompatActivity(), OnItemClick, OnItemLongClick {
 
         data = resources.getStringArray(R.array.main_item).toList()
         val adapter = RecyAdapter(this, data, this, this)
+
         val layoutManager = LinearLayoutManager(this)
         layoutManager.orientation = RecyclerView.VERTICAL
         recyclerView!!.layoutManager = layoutManager
@@ -106,8 +110,8 @@ class MainNewActivity : AppCompatActivity(), OnItemClick, OnItemLongClick {
         val intent: Intent
         when (data[position]) {
             "glide", "glide" -> {
-//                intent = Intent(this@MainNewActivity, GlideActivity::class.java)
-                intent = Intent(this@MainNewActivity, ANRActivity::class.java)
+                intent = Intent(this@MainNewActivity, GlideActivity::class.java)
+//                intent = Intent(this@MainNewActivity, ANRActivity::class.java)
                 startActivity(intent)
             }
             "内存管理", "memory manage" -> {
@@ -121,6 +125,8 @@ class MainNewActivity : AppCompatActivity(), OnItemClick, OnItemLongClick {
             "start_service", "启动服务" -> {
             }
             "bind_service", "绑定服务" -> {
+                intent = Intent(this@MainNewActivity, MessengerActivity::class.java)
+                startActivity(intent)
             }
             "ForegroundService", "前台服务" -> {
                 intent = Intent(this@MainNewActivity, ForegroundServiceActivity::class.java)
@@ -263,6 +269,14 @@ class MainNewActivity : AppCompatActivity(), OnItemClick, OnItemLongClick {
                         }
                         .build()
                         .show(supportFragmentManager, "su")
+            }
+            "Dagger2" -> {
+                intent = Intent(this@MainNewActivity, DaggerActivity1::class.java)
+                startActivity(intent)
+            }
+            "ContentProvider" -> {
+                intent = Intent(this@MainNewActivity, ClientActivity::class.java)
+                startActivity(intent)
             }
         }
     }

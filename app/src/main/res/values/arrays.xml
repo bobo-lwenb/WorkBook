@@ -38,5 +38,7 @@
         <item>TypeEvaluator</item>
         <item>自定义对话框1</item>
         <item>自定义对话框2</item>
+        <item>Dagger2</item>
+        <item>ContentProvider</item>
     </string-array>
 </resources>

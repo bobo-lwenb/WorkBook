@@ -10,6 +10,10 @@ import com.workbook.liuwb.mylibrary.utils.Logger
 import com.workbook.liuwb.workbook.R
 import com.workbook.liuwb.workbook.WBConstants
 
+/**
+ * 互相持有对方的Messenger，这个Messenger又是由各自持有的Handler初始化来的
+ * 所以双方就可以相互通信了
+ */
 class MessengerActivity : AppCompatActivity() {
 
     private val mGetReplyMessenger = Messenger(MessengerHandler())
@@ -21,7 +25,9 @@ class MessengerActivity : AppCompatActivity() {
             val bundle = Bundle()
             bundle.putString("msg", "hello,this is from client!")
             message.data = bundle
+            // =====
             message.replyTo = mGetReplyMessenger
+            // =====
             try {
                 mServerMessenger.send(message)
             } catch (e: RemoteException) {
@@ -45,7 +51,7 @@ class MessengerActivity : AppCompatActivity() {
         unbindService(mConnection)
     }
 
-    private class MessengerHandler : Handler() {
+    private class MessengerHandler : Handler(Looper.getMainLooper()) {
         override fun handleMessage(msg: Message) {
             when (msg.what) {
                 WBConstants.MSG_FROM_SERVICE -> Logger.e(TAG + msg.data.getString("reply")!!)
@@ -55,6 +61,6 @@ class MessengerActivity : AppCompatActivity() {
     }
 
     companion object {
-        private val TAG = "MessengerActivity"
+        private const val TAG = "MessengerActivity"
     }
 }

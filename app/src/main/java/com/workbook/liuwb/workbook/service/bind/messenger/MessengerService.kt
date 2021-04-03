@@ -14,12 +14,13 @@ class MessengerService : Service() {
         return mMessenger.binder
     }
 
-    private class MessengerHandler : Handler() {
+    private class MessengerHandler : Handler(Looper.getMainLooper()) {
         override fun handleMessage(msg: Message) {
             when (msg.what) {
                 WBConstants.MSG_FROM_CLIENT -> {
                     Logger.e(TAG + msg.data.getString("msg")!!)
 
+                    // =====
                     val mFromClientMessenger = msg.replyTo
                     val relpyMessage = Message.obtain(null, WBConstants.MSG_FROM_SERVICE)
                     val bundle = Bundle()
@@ -30,7 +31,7 @@ class MessengerService : Service() {
                     } catch (e: RemoteException) {
                         e.printStackTrace()
                     }
-
+                    // =====
                 }
                 else -> super.handleMessage(msg)
             }
