@@ -165,4 +165,11 @@ class CarouselViewGroup : ViewGroup {
         }
         return true
     }
+
+    override fun performClick(): Boolean {
+        invalidate()
+        requestLayout()
+        requestFocus()
+        return super.performClick()
+    }
 }

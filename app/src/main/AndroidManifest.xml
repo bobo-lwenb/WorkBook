@@ -3,7 +3,6 @@
     package="com.workbook.liuwb.workbook">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -130,7 +129,6 @@
         </activity>
         <activity android:name=".memory.Memory1Activity" />
         <activity android:name=".anrdemo.ANRActivity" />
-        <activity android:name=".dagger.DaggerActivity1" />
         <activity android:name=".provider.base.ClientActivity" />
 
         <receiver android:name=".notification.MyBroadcastReceiver" />

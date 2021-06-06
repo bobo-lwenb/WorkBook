@@ -5,19 +5,17 @@ apply from: 'gradledemo/increment.gradle'
 apply from: 'gradledemo/plugins.gradle'
 
 buildscript {
-    ext.kotlin_version = '1.4.32'
+    ext.kotlin_version = '1.5.10'
 
     repositories {
-        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         mavenCentral()
         google()
-        jcenter()
         maven {
             url uri("file://$rootDir.parent/../common_set/PluginsBunch/repos/")
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.3'
+        classpath 'com.android.tools.build:gradle:4.2.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath 'com.lwb.plugin:test:1.0.1'
         // NOTE: Do not place your application dependencies here; they belong
@@ -27,6 +25,7 @@ buildscript {
 
 allprojects {
     repositories {
+        mavenCentral()
         google()
         jcenter()
     }

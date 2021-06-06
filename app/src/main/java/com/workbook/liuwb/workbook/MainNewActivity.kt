@@ -23,9 +23,7 @@ import com.workbook.liuwb.workbook.aboutview.customviewgroup.carousel.CarouselAc
 import com.workbook.liuwb.workbook.adapters.RecyAdapter
 import com.workbook.liuwb.workbook.aidl.BookManagerActivity
 import com.workbook.liuwb.workbook.annotation.AnnoActivity
-import com.workbook.liuwb.workbook.anrdemo.ANRActivity
 import com.workbook.liuwb.workbook.autosize.AutoSizeActivity
-import com.workbook.liuwb.workbook.dagger.DaggerActivity1
 import com.workbook.liuwb.workbook.databind.DataBindDemoActivity
 import com.workbook.liuwb.workbook.eventbus.EventOneActivity
 import com.workbook.liuwb.workbook.flutter.TestFlutterActivity
@@ -65,7 +63,7 @@ class MainNewActivity : AppCompatActivity(), OnItemClick, OnItemLongClick {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_new)
 
-        
+
         Log.e("11111111111", (100 <= 1700).toString())
 
         DensityUtil.setCustomDensity(application, this)
@@ -271,8 +269,6 @@ class MainNewActivity : AppCompatActivity(), OnItemClick, OnItemLongClick {
                         .show(supportFragmentManager, "su")
             }
             "Dagger2" -> {
-                intent = Intent(this@MainNewActivity, DaggerActivity1::class.java)
-                startActivity(intent)
             }
             "ContentProvider" -> {
                 intent = Intent(this@MainNewActivity, ClientActivity::class.java)
