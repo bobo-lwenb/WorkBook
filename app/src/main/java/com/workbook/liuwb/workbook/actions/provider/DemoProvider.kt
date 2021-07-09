@@ -7,7 +7,6 @@ import android.content.UriMatcher
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.net.Uri
-import android.util.Log
 
 class DemoProvider : ContentProvider() {
 
@@ -15,7 +14,6 @@ class DemoProvider : ContentProvider() {
     private lateinit var uriMatcher: UriMatcher
 
     override fun onCreate(): Boolean {
-        Log.e("DemoProvider", "1111111")
         database = DBOpenHelper(context).writableDatabase
         DBOpenHelper(context).readableDatabase
         uriMatcher = UriMatcher(UriMatcher.NO_MATCH)
@@ -87,7 +85,7 @@ class DemoProvider : ContentProvider() {
 
     companion object {
         private const val TAG = "DemoProvider"
-        private const val AUTHORITY = "com.workbook.liuwb.workbook.anew.provider"
+        private const val AUTHORITY = "com.workbook.liuwb.workbook.actions.provider"
         private const val PATH = "student"
         private const val STUDENT_URI_CODE = 0
     }

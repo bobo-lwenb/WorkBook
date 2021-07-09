@@ -1,6 +1,5 @@
 package com.workbook.liuwb.workbook.main
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -25,7 +24,6 @@ import com.workbook.liuwb.workbook.actions.webview.WebViewActivity
 import com.workbook.liuwb.workbook.databinding.ActivityMainNewBinding
 import com.workbook.liuwb.workbook.main.listener.OnItemClick
 import com.workbook.liuwb.workbook.main.listener.OnItemLongClick
-import com.workbook.liuwb.workbook.modify
 
 class MainNewActivity : AppCompatActivity(), OnItemClick, OnItemLongClick {
 
@@ -51,10 +49,6 @@ class MainNewActivity : AppCompatActivity(), OnItemClick, OnItemLongClick {
         binding.mainnewRecyclerview.setHasFixedSize(true)
         val itemDecoration = DividerItemDecoration(this, DividerItemDecoration.VERTICAL)
         binding.mainnewRecyclerview.addItemDecoration(itemDecoration)
-
-        getSharedPreferences("", Context.MODE_PRIVATE).modify {
-            putBoolean("", false)
-        }
     }
 
     override fun onDestroy() {
@@ -118,7 +112,6 @@ class MainNewActivity : AppCompatActivity(), OnItemClick, OnItemLongClick {
                 intent = Intent(this, ThirdMainActivity::class.java)
                 startActivity(intent)
             }
-            // ======================
         }
     }
 

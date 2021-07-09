@@ -16,6 +16,9 @@ class WebViewActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+        binding.androidToJs.setOnClickListener(this)
+        binding.jsToAndroid.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {

@@ -17,6 +17,8 @@ class JetpackActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+        binding.databinding.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {

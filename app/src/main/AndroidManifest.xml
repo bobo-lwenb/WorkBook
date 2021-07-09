@@ -66,8 +66,12 @@
         <activity android:name=".actions.jetpack.databind.DataBindDemoActivity" />
 
         <activity android:name=".actions.material.MaterialActivity" />
-        <activity android:name=".actions.material.ScrollFlagsActivity" />
-        <activity android:name=".actions.material.CollapsingActivity" />
+        <activity
+            android:name=".actions.material.CollapsingActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".actions.material.ScrollFlagsActivity"
+            android:theme="@style/AppTheme" />
         <activity android:name=".actions.material.nested.NestedActivity" />
 
         <activity android:name=".actions.webview.WebViewActivity" />
@@ -148,11 +152,9 @@
                 android:resource="@xml/provider_paths" />
         </provider>
         <provider
-            android:name="com.workbook.liuwb.workbook.actions.provider.DemoProvider"
+            android:name=".actions.provider.DemoProvider"
             android:authorities="com.workbook.liuwb.workbook.actions.provider"
-            android:exported="true"
-            android:process=":provider"
-            android:readPermission="com.android.peter.provider.READ_PERMISSION"
-            android:writePermission="com.android.peter.provider.WRITE_PERMISSION" />
+            android:enabled="true"
+            android:exported="false" />
     </application>
 </manifest>

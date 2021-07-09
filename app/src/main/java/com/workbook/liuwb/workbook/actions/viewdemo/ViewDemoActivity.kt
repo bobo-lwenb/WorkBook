@@ -19,6 +19,10 @@ class ViewDemoActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+        binding.scrollable.setOnClickListener(this)
+        binding.menu.setOnClickListener(this)
+        binding.notification.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {

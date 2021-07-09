@@ -25,7 +25,7 @@ class StructureMainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View) {
         val intent: Intent
-        when(v.id) {
+        when (v.id) {
             R.id.mvp_v1 -> {
                 intent = Intent(this, UserActivity::class.java)
                 startActivity(intent)

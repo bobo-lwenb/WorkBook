@@ -82,7 +82,7 @@ class ProviderActivity : AppCompatActivity() {
 
     companion object {
         private const val TAG = "ClientActivity"
-        private const val AUTHORITY = "com.workbook.liuwb.workbook.anew.provider"
+        private const val AUTHORITY = "com.workbook.liuwb.workbook.actions.provider"
         private val STUDENT_URI = Uri.parse("content://$AUTHORITY/student")
     }
 }

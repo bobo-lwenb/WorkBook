@@ -14,7 +14,7 @@ class ScrollFlagsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_scroll_flags)
+        setContentView(binding.root)
 
         setSupportActionBar(binding.toolbarFlag)
         binding.fabFlag.setOnClickListener { view ->
