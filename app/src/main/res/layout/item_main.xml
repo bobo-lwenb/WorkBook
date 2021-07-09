@@ -10,5 +10,4 @@
         android:layout_height="60dp"
         android:background="@null"
         android:textAllCaps="false" />
-
 </LinearLayout>

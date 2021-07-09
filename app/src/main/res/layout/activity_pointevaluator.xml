@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.workbook.liuwb.workbook.propertyanimation.evaluator.MyAnimView
+    <com.workbook.liuwb.workbook.actions.animation.propertyanimation.evaluator.MyAnimView
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

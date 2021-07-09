@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.workbook.liuwb.workbook.aboutview.gesturedetector.GestureDetectorView
+    <com.workbook.liuwb.workbook.actions.customview.gesture.GestureDetectorView
         android:layout_width="match_parent"
         android:layout_height="500dp" />
 

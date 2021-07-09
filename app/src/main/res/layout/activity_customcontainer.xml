@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.workbook.liuwb.workbook.aboutview.customviewgroup.cornerviewgroup.CustomContainer
+    <com.workbook.liuwb.workbook.actions.customview.viewgroup.CustomContainer
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#AA333333">
@@ -52,6 +52,6 @@
             android:textColor="#FFFFFF"
             android:textSize="22sp"
             android:textStyle="bold" />
-    </com.workbook.liuwb.workbook.aboutview.customviewgroup.cornerviewgroup.CustomContainer>
+    </com.workbook.liuwb.workbook.actions.customview.viewgroup.CustomContainer>
 
 </LinearLayout>

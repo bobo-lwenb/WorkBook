@@ -27,8 +27,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+
         <activity
-            android:name=".activity.SplashActivity"
+            android:name=".splash.SplashActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,85 +38,64 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainNewActivity"
+            android:name=".main.MainNewActivity"
             android:configChanges="keyboardHidden|keyboard"
             android:theme="@style/AppTheme" />
+
         <activity
-            android:name=".glide.GlideActivity"
-            android:parentActivityName=".MainNewActivity"
+            android:name="com.workbook.liuwb.workbook.actions.third.glide.GlideActivity"
+            android:parentActivityName=".main.MainNewActivity"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainNewActivity" />
+                android:value=".main.MainNewActivity" />
         </activity>
-        <activity android:name="com.workbook.liuwb.workbook.aboutview.customviewgroup.carousel.CarouselActivity" />
-        <activity android:name="com.workbook.liuwb.workbook.service.bind.messenger.MessengerActivity" />
-        <activity android:name=".aidl.BookManagerActivity" />
-        <activity android:name=".designpattern.adapter.AdapterActivity" />
-        <activity android:name=".designpattern.strategy.StrategyActivity" />
-        <activity android:name=".databind.DataBindDemoActivity" />
-        <activity android:name=".rxjava.RxJavaActivity" />
-        <activity android:name=".annotation.AnnoActivity" />
-        <activity android:name=".reflect.ReflectActivity" />
-        <activity android:name=".eventbus.EventOneActivity" />
-        <activity android:name=".eventbus.EventTwoActivity" />
-        <activity android:name=".eventbus.EventThreeActivity" />
-        <activity android:name=".retrofit.RetrofitActivity" />
-        <activity android:name=".autosize.AutoSizeActivity" />
-        <activity android:name=".material.MaterialActivity" />
-        <activity android:name=".material.ScrollFlagsActivity" />
-        <activity android:name=".material.CollapsingActivity" />
-        <activity android:name=".material.nested.NestedActivity" />
-        <activity android:name=".launchmode.LaunchMainActivity" />
+
+        <activity android:name=".actions.memorymanage.MemoryActivity" />
+        <activity android:name=".actions.memorymanage.memoryleak.MemoryLeakActivity" />
+        <activity android:name=".actions.memorymanage.anr.ANRActivity" />
+
+        <activity android:name=".actions.service.ServiceMainActivity" />
+        <activity android:name=".actions.service.start.foregroundservice.ForegroundServiceActivity" />
+        <activity android:name=".actions.service.bind.bind.BindingActivity" />
+        <activity android:name=".actions.service.bind.messenger.MessengerActivity" />
+
+        <activity android:name=".actions.provider.ProviderActivity" />
+
+        <activity android:name=".actions.jetpack.JetpackActivity" />
+        <activity android:name=".actions.jetpack.databind.DataBindDemoActivity" />
+
+        <activity android:name=".actions.material.MaterialActivity" />
+        <activity android:name=".actions.material.ScrollFlagsActivity" />
+        <activity android:name=".actions.material.CollapsingActivity" />
+        <activity android:name=".actions.material.nested.NestedActivity" />
+
+        <activity android:name=".actions.webview.WebViewActivity" />
+        <activity android:name=".actions.webview.Android2JSActivity" />
+        <activity android:name=".actions.webview.JS2AndroidActivity" />
+
+        <activity android:name=".actions.viewdemo.ViewDemoActivity" />
+        <activity android:name=".actions.viewdemo.scrollable.listview.ListViewActivity" />
+        <activity android:name=".actions.viewdemo.scrollable.recyclerview.RecycleActivity" />
         <activity
-            android:name=".launchmode.LaunchOneActivity"
-            android:taskAffinity="qaz.qaz">
-            <!--            <intent-filter>-->
-            <!--                <action android:name="android.intent.action.MAIN" />-->
-            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
-            <!--            </intent-filter>-->
-        </activity>
-        <activity android:name=".launchmode.LaunchTwoActivity" />
-        <activity android:name=".launchmode.LaunchThreeActivity" />
-        <activity android:name=".notification.NotificationDemoActivity" />
+            android:name=".actions.viewdemo.menu.MenuDemoActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".actions.viewdemo.notification.NotificationDemoActivity" />
         <activity
-            android:name=".notification.TapActionActivity"
-            android:parentActivityName=".notification.NotificationDemoActivity" />
+            android:name=".actions.viewdemo.notification.TapActionActivity"
+            android:parentActivityName=".actions.viewdemo.notification.NotificationDemoActivity" />
+
+        <activity android:name=".actions.animation.AnimationActivity" />
+        <activity android:name=".actions.animation.propertyanimation.LayoutAnimationsActivity" />
+        <activity android:name=".actions.animation.propertyanimation.evaluator.PointEvaluatorActivity" />
+
+        <activity android:name=".actions.function.FunctionMainActivity" />
+        <activity android:name=".actions.function.permission.PermissionActivity" />
+        <activity android:name=".actions.function.aidl.BookManagerActivity" />
+        <activity android:name=".actions.function.annotation.AnnoActivity" />
+        <activity android:name=".actions.function.reflect.ReflectActivity" />
         <activity
-            android:name=".menu.MenuDemoActivity"
-            android:parentActivityName=".MainNewActivity"
-            android:theme="@style/AppTheme">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainNewActivity" />
-        </activity>
-        <activity android:name=".refreshandloadmore.RefreshLoadMainActivity" />
-        <activity android:name=".refreshandloadmore.refreshload.RefreshLoadActivity" />
-        <activity android:name=".flutter.TestFlutterActivity" />
-        <activity android:name=".permission.PermissionActivity" />
-        <activity android:name=".aboutview.ViewMainActivity" />
-        <activity android:name=".aboutview.velocitytracker.VelocityTrackerActivity" />
-        <activity android:name=".aboutview.gesturedetector.GestureDetectorActivity" />
-        <activity android:name=".aboutview.scroller.ScrollToByActivity" />
-        <activity android:name=".service.bind.foregroundservice.ForegroundServiceActivity" />
-        <activity android:name=".handler.HandlerThreadActivity" />
-        <activity android:name=".fragment.LifeCycleActivity" />
-        <activity android:name=".mvp.v1.view.UserActivity" />
-        <activity android:name=".webview.Android2JSActivity" />
-        <activity android:name=".webview.JS2AndroidActivity" />
-        <activity android:name=".jsonparse.JsonActivity" />
-        <activity android:name=".list.listview.ListViewActivity" />
-        <activity android:name=".list.recyclerview.RecycleActivity" />
-        <activity android:name=".scoket.demo1.TCPClientActivity" />
-        <activity android:name=".propertyanimation.LayoutAnimationsActivity" />
-        <activity android:name=".propertyanimation.evaluator.PointEvaluatorActivity" />
-        <activity android:name=".aboutview.customview.CustomTitleActivity" />
-        <activity android:name=".aboutview.customview.CustomImageActivity" />
-        <activity android:name=".aboutview.customview.CustomProgressBarActivity" />
-        <activity android:name=".aboutview.customviewgroup.cornerviewgroup.CustomContainerActivity" />
-        <activity android:name=".aboutview.customviewgroup.cornerviewgroup.FlowLayoutActivity" />
-        <activity
-            android:name=".storage.FliesListActivity"
+            android:name="com.workbook.liuwb.workbook.actions.function.file.FliesListActivity"
             android:label="File Selector">
             <intent-filter>
                 <action android:name="android.intent.action.PICK" />
@@ -127,32 +107,36 @@
                 <data android:mimeType="image/*" />
             </intent-filter>
         </activity>
-        <activity android:name=".memory.Memory1Activity" />
-        <activity android:name=".anrdemo.ANRActivity" />
-        <activity android:name=".provider.base.ClientActivity" />
 
-        <receiver android:name=".notification.MyBroadcastReceiver" />
-        <!--        <receiver android:name=".anrdemo.MyReceiver">-->
-        <!--            <intent-filter>-->
-        <!--                <action android:name="com.brotherd.broadcastdemo.BROADCAST_FIRST" />-->
-        <!--            </intent-filter>-->
-        <!--        </receiver>-->
+        <activity android:name=".actions.appstructure.StructureMainActivity" />
+        <activity android:name=".actions.appstructure.mvp.v1.view.UserActivity" />
+        <activity android:name=".actions.appstructure.mvp.v2.UserLoginActivity" />
 
-        <service android:name=".service.bind.foregroundservice.MyService" />
-        <service android:name="com.workbook.liuwb.workbook.service.bind.messenger.MessengerService" />
+        <activity android:name=".actions.third.ThirdMainActivity" />
+        <activity android:name=".actions.third.retrofit.RetrofitActivity" />
+
+        <activity android:name=".actions.customview.CustomViewMainActivity" />
+        <activity android:name=".actions.customview.view.FollowFingerActivity" />
+        <activity android:name=".actions.customview.view.CustomTitleActivity" />
+        <activity android:name=".actions.customview.view.CustomImageActivity" />
+        <activity android:name=".actions.customview.view.CustomProgressBarActivity" />
+
+        <activity android:name=".actions.customview.viewgroup.NoSlipViewPagerActivity" />
+        <activity android:name=".actions.customview.viewgroup.CarouselActivity" />
+        <activity android:name=".actions.customview.viewgroup.MyScrollerActivity" />
+        <activity android:name=".actions.customview.viewgroup.CustomContainerActivity" />
+        <activity android:name=".actions.customview.viewgroup.FlexedLayoutActivity" />
+
+        <activity android:name=".actions.customview.gesture.VelocityTrackerActivity" />
+        <activity android:name=".actions.customview.gesture.GestureDetectorActivity" />
+        <!---->
+        <receiver android:name=".actions.viewdemo.notification.MyBroadcastReceiver" />
+
+        <service android:name=".actions.service.start.foregroundservice.MyService" />
+        <service android:name=".actions.service.bind.messenger.MessengerService" />
         <service
-            android:name=".aidl.BookManagerService"
+            android:name=".actions.function.aidl.BookManagerService"
             android:process=":remote" />
-        <service
-            android:name=".scoket.demo1.TCPServerService"
-            android:process=":remote" />
-
-        <meta-data
-            android:name="design_width_in_dp"
-            android:value="375" />
-        <meta-data
-            android:name="design_height_in_dp"
-            android:value="667" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -164,12 +148,11 @@
                 android:resource="@xml/provider_paths" />
         </provider>
         <provider
-            android:name=".provider.base.DemoProvider"
-            android:authorities="com.workbook.liuwb.workbook.provider"
+            android:name="com.workbook.liuwb.workbook.actions.provider.DemoProvider"
+            android:authorities="com.workbook.liuwb.workbook.actions.provider"
             android:exported="true"
             android:process=":provider"
             android:readPermission="com.android.peter.provider.READ_PERMISSION"
             android:writePermission="com.android.peter.provider.WRITE_PERMISSION" />
     </application>
-
 </manifest>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.workbook.liuwb.workbook.actions.customview.viewgroup.FlexedLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/text_bg_style"
+            android:text="Welcome" />
+
+        <TextView
+            style="@style/text_bg_style"
+            android:text="IT工程师" />
+
+        <TextView
+            style="@style/text_bg_style"
+            android:text="学习ing" />
+
+        <TextView
+            style="@style/text_bg_style"
+            android:text="恋爱ing" />
+
+        <TextView
+            style="@style/text_bg_style"
+            android:text="挣钱ing" />
+
+        <TextView
+            style="@style/text_bg_style"
+            android:text="努力ing" />
+
+        <TextView
+            style="@style/text_bg_style"
+            android:text="I thick i can" />
+    </com.workbook.liuwb.workbook.actions.customview.viewgroup.FlexedLayout>
+
+</LinearLayout>

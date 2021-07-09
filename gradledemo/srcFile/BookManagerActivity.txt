@@ -1,4 +1,4 @@
-package com.workbook.liuwb.workbook.aidl;
+package com.workbook.liuwb.workbook.actions.functions.aidl;
 
 import android.content.ComponentName;
 import android.content.Context;

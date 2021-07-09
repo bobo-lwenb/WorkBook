@@ -1,4 +1,4 @@
-package com.workbook.liuwb.workbook.aidl;
+package com.workbook.liuwb.workbook.actions.functions.aidl;
 
 import android.app.Service;
 import android.content.Intent;
@@ -114,7 +114,7 @@ public class BookManagerService extends Service {
     }
 }
 
-package com.workbook.liuwb.workbook.aidl;
+package com.workbook.liuwb.workbook.actions.functions.aidl;
 
 import android.content.ComponentName;
 import android.content.Context;

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View" />
+
+        <TextView
+            android:id="@+id/custom_image"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="CustomImageView" />
+
+        <TextView
+            android:id="@+id/custom_progressbar"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="CustomProgressBar" />
+
+        <TextView
+            android:id="@+id/custom_title"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="CustomTitle" />
+
+        <TextView
+            android:id="@+id/follow_finger"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="FollowFinger" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="ViewGroup" />
+
+        <TextView
+            android:id="@+id/no_slip_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="NoSlipViewPager" />
+
+        <TextView
+            android:id="@+id/carousel_view"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="CarouselView" />
+
+        <TextView
+            android:id="@+id/my_scroller_view"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="MyScrollerView" />
+
+        <TextView
+            android:id="@+id/custom_container"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="CustomContainer" />
+
+        <TextView
+            android:id="@+id/flexed_layout"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="流式布局" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Dialog" />
+
+        <TextView
+            android:id="@+id/dialog_1"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="自定义对话框1" />
+
+        <TextView
+            android:id="@+id/dialog_2"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="自定义对话框2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Gesture" />
+
+        <TextView
+            android:id="@+id/velocity_tracker"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="VelocityTracker" />
+
+        <TextView
+            android:id="@+id/gesture_detector"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="GestureDetector" />
+    </LinearLayout>
+</ScrollView>

@@ -5,11 +5,11 @@
 
         <variable
             name="bean"
-            type="com.workbook.liuwb.workbook.databind.Demo" />
+            type="com.workbook.liuwb.workbook.actions.jetpack.databind.Demo" />
 
         <variable
             name="user"
-            type="com.workbook.liuwb.workbook.databind.User" />
+            type="com.workbook.liuwb.workbook.actions.jetpack.databind.User" />
 
         <variable
             name="list"
