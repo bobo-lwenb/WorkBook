@@ -19,6 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_marginTop="8dp"
+            android:background="?android:attr/selectableItemBackground"
             android:gravity="center"
             android:text="CustomImageView" />
 
@@ -27,6 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_marginTop="8dp"
+            android:background="?android:attr/selectableItemBackground"
             android:gravity="center"
             android:text="CustomProgressBar" />
 
@@ -35,6 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_marginTop="8dp"
+            android:background="?android:attr/selectableItemBackground"
             android:gravity="center"
             android:text="CustomTitle" />
 
@@ -43,6 +46,7 @@
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_marginTop="8dp"
+            android:background="?android:attr/selectableItemBackground"
             android:gravity="center"
             android:text="FollowFinger" />
 
@@ -57,6 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_marginTop="8dp"
+            android:background="?android:attr/selectableItemBackground"
             android:gravity="center"
             android:text="NoSlipViewPager" />
 
@@ -65,6 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_marginTop="8dp"
+            android:background="?android:attr/selectableItemBackground"
             android:gravity="center"
             android:text="CarouselView" />
 
@@ -73,6 +79,7 @@
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_marginTop="8dp"
+            android:background="?android:attr/selectableItemBackground"
             android:gravity="center"
             android:text="MyScrollerView" />
 
@@ -81,6 +88,7 @@
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_marginTop="8dp"
+            android:background="?android:attr/selectableItemBackground"
             android:gravity="center"
             android:text="CustomContainer" />
 
@@ -89,6 +97,7 @@
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_marginTop="8dp"
+            android:background="?android:attr/selectableItemBackground"
             android:gravity="center"
             android:text="流式布局" />
 
@@ -103,6 +112,7 @@
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_marginTop="8dp"
+            android:background="?android:attr/selectableItemBackground"
             android:gravity="center"
             android:text="自定义对话框1" />
 
@@ -111,6 +121,7 @@
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_marginTop="8dp"
+            android:background="?android:attr/selectableItemBackground"
             android:gravity="center"
             android:text="自定义对话框2" />
 
@@ -125,6 +136,7 @@
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_marginTop="8dp"
+            android:background="?android:attr/selectableItemBackground"
             android:gravity="center"
             android:text="VelocityTracker" />
 
@@ -133,6 +145,7 @@
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_marginTop="8dp"
+            android:background="?android:attr/selectableItemBackground"
             android:gravity="center"
             android:text="GestureDetector" />
     </LinearLayout>

@@ -7,7 +7,7 @@
     <Button
         android:id="@+id/main_item"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@null"
+        android:layout_height="50dp"
+        android:background="?android:attr/selectableItemBackground"
         android:textAllCaps="false" />
 </LinearLayout>

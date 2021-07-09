@@ -30,7 +30,7 @@
         android:id="@+id/databinding"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@null"
+        android:background="?android:attr/selectableItemBackground"
         android:text="DataBinding"
         android:textAllCaps="false"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"

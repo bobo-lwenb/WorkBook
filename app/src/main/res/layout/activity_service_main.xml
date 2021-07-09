@@ -45,6 +45,17 @@
         app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toBottomOf="@+id/view_animation" />
 
+    <Button
+        android:id="@+id/foreground_service"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="前台服务"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/start_service" />
+
     <TextView
         android:id="@+id/property_animation"
         android:layout_width="wrap_content"
@@ -54,34 +65,24 @@
         app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toBottomOf="@+id/foreground_service" />
 
+
     <Button
         android:id="@+id/bind_service"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:background="@null"
+        android:background="?android:attr/selectableItemBackground"
         android:text="绑定服务"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toBottomOf="@+id/property_animation" />
 
     <Button
-        android:id="@+id/foreground_service"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@null"
-        android:text="前台服务"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/guideline1"
-        app:layout_constraintTop_toBottomOf="@+id/start_service" />
-
-    <Button
         android:id="@+id/messenger_single"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:background="@null"
+        android:background="?android:attr/selectableItemBackground"
         android:text="单向Messenger服务"
         android:textAllCaps="false"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
@@ -93,7 +94,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:background="@null"
+        android:background="?android:attr/selectableItemBackground"
         android:text="双向Messenger服务"
         android:textAllCaps="false"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"

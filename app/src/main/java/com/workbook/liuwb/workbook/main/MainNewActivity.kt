@@ -106,7 +106,6 @@ class MainNewActivity : AppCompatActivity(), OnItemClick, OnItemLongClick {
                 startActivity(intent)
             }
             "设计模式" -> {
-
             }
             "第三方框架" -> {
                 intent = Intent(this, ThirdMainActivity::class.java)
